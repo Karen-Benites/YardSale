@@ -1,0 +1,141 @@
+:root{
+    --primary-color: #ACD9B2;
+    --secondary-color: #C7C7C7;
+    --white: #FFFFFF;
+    --dark: #232830;
+    --text-input-field: #F7F7F7;
+    --black: #000000;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 62.5%;
+}
+
+h1{
+    font-size: var(--lg);
+}
+
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.my-order-global{
+    width: 400px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    position: absolute;
+    right: 0;
+    border-left: 1px solid var(--secondary-color);
+    padding: 0 24px 24px;
+}
+
+.my-order-content{
+    display: flex;
+    height: 76px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--text-input-field);
+    border-radius: 10px;
+    padding: 16px 18px 18px;
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: var(--md);
+}
+
+.my-order-cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.order-description{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.price{
+    font-size: var(--md);
+    font-weight: bold;
+}
+
+.primary-button{
+    width: 100%;
+    height: 5rem;
+    border-radius: .8rem;
+    border: none;
+    font-size: var(--md);
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.top-info{
+    display: flex;
+    align-items: center;
+    margin: 24px 0 32px 0;
+    gap: 24px;
+}
+
+.top-info img{
+    width: 24px;
+    height: 16px;
+    opacity: .4;
+}
+
+.order-description p{
+    color: var(--secondary-color);
+    font-size: var(--sm);
+}
+.order-description img{
+    width: 76px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.my-order-content p{
+    display: flex;
+    flex-direction: column;
+}
+
+.my-order-content p span:last-child{
+    font-weight: 300;
+    font-size: var(--sm);
+}
+
+.my-order-cart div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+@media (max-width: 640px){
+    .my-order-global{
+        width: 100%;
+        max-width: 450px;
+        grid-template-rows: auto auto;
+    }
+
+    .top-info{
+        display: none;
+    }
+
+    .my-order-global div:nth-child(2){
+        margin-top: 24px;
+    }
+}
